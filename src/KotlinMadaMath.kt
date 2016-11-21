@@ -16,13 +16,11 @@ class Father(var fatherName:String, var childName:String){
 class Grandfather(var grandfatherName:String, var childName:String){
 }
 
-class And(firstFact:Father, secondFact:Father){
-    init{
+fun And(firstFact:Father, secondFact:Father){
         if(firstFact.childName.equals(secondFact.fatherName)){
             var newGrandfather= Grandfather(firstFact.fatherName, secondFact.childName)
             grandfatherFacts.add(newGrandfather)
         }
-    }
 }
 
 fun addFather(actualFather: Father):Unit{
